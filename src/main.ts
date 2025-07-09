@@ -10,7 +10,9 @@ const productArray: Array<Product> = [];
 productArray.push(hamsterPellets);
 productArray.push(digitalHamsterPellets);
 
+console.log("=========");
 for (let item of productArray) {
   item.displayDetails();
-  console.log(`Has a final price of ${calculateTax(item)}`);
+  console.log(`Has a final price of $${calculateTax(item)}`);
+  console.log("=========");
 }

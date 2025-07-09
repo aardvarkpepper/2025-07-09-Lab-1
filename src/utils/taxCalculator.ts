@@ -3,5 +3,5 @@ import { Product } from '../models/Product.ts';
 // import { DigitalProduct } from '../models/DigitalProduct.ts';
 
 export const calculateTax = (product: Product):number => {
-  return product.getPriceWithTax();
+  return Number(product.getPriceWithTax().toFixed(2));
 }
