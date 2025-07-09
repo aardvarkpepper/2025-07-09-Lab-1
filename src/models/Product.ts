@@ -1,4 +1,8 @@
-export class Product {
+interface DiscountableProduct {
+  applyDiscount(discountAmount: number):void;
+}
+
+export class Product implements DiscountableProduct {
   sku: string;
   name: string;
   price: number;
@@ -13,4 +17,8 @@ export class Product {
   getPriceWithTax = ():number => {
     return this.price;
   }
+  applyDiscount = (discountAmount: number):void => {
+    this.price = this.price - discountAmount;
+  }
 }
+
