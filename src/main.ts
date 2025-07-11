@@ -3,6 +3,7 @@ import { PhysicalProduct } from './models/PhysicalProduct.ts';
 import { DigitalProduct } from './models/DigitalProduct.ts';
 import { calculateTax } from './utils/taxCalculator.ts';
 import { sortByPriceOrName } from './utils/sort.ts';
+import { Inventory } from './models/Inventory.ts';
 
 const apple = new PhysicalProduct("skuApple", "Apple", 3, 0.5);
 const banana = new PhysicalProduct("skuBanana", "Banana", 2, 0.4);
@@ -22,3 +23,5 @@ for (let item of productArray) {
 
 console.log(sortByPriceOrName(productArray, "name"));
 console.log(sortByPriceOrName(productArray, "price"));
+
+
