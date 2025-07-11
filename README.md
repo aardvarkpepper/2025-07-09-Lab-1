@@ -49,6 +49,6 @@ I believe TypeScript considers the last line an error as .weight references Phys
 
 I think this probably happens whenever any data type uses a property that's defined on one union type but not other(s).
 
-
+Bypassed using Typescript 'as'.
 
 weightReqd -= (orderArray[i].product as PhysicalProduct).weight;
